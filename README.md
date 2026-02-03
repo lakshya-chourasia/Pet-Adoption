@@ -12,9 +12,21 @@ A simple, responsive web page for a Pet Adoption service. This project showcases
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/lakshya-chourasia/Pet-Adoption.git
    ```
-2. Open `app.html` in your web browser.
+2. Open `index.html` in your web browser.
+
+## Project Structure
+
+```
+Pet-Adoption/
+├── index.html          # Main HTML file
+├── css/
+│   └── style.css      # Stylesheet
+├── images/            # Pet images
+├── README.md
+└── LICENSE
+```
 
 ## Technologies Used
 
