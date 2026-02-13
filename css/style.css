@@ -18,6 +18,16 @@
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
     --transition-speed: 0.3s;
+
+    /* Card Variables */
+    --color-text-tertiary: #787878;
+    --color-focus-ring: #f00000;
+    --color-icon-hover: #EC4646;
+
+    --card-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 20px 50px 0 rgba(0, 0, 0, .1);
+    --card-shadow-hover: 0 0 0 2px var(--color-focus-ring), 0 10px 60px 0 rgba(0, 0, 0, .1);
+
+    --icon-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 3px 8px 0 rgba(0, 0, 0, .15);
 }
 
 /* General Reset */
@@ -74,8 +84,8 @@ header {
 }
 
 .card {
-	background-color: #FFF;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 20px 50px 0 rgba(0, 0, 0, .1);
+	background-color: var(--color-light);
+	box-shadow: var(--card-shadow);
 	border-radius: 15px;
 	padding: 1.25rem;
 	position: relative;
@@ -84,7 +94,7 @@ header {
 }
 
 .card:hover, .card:focus-within {
-	box-shadow: 0 0 0 2px #f00000, 0 10px 60px 0 rgba(0, 0, 0, .1);
+	box-shadow: var(--card-shadow-hover);
 	transform: translateY(-5px);
 }
 
@@ -130,14 +140,14 @@ header {
 
 .card p {
     margin-top: 1rem;
-    color: #787878;
+    color: var(--color-text-tertiary);
     font-family: "Lexend", sans-serif;
     line-height: 1.5;
 }
 
 .icon-button {
 	border: 0;
-	background-color: #fff;
+	background-color: var(--color-light);
 	border-radius: 50%;
 	width: 2.5rem;
 	height: 2.5rem;
@@ -147,10 +157,10 @@ header {
 	flex-shrink: 0;
 	font-size: 1.25rem;
 	transition: .25s ease;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 3px 8px 0 rgba(0, 0, 0, .15);
+	box-shadow: var(--icon-shadow);
 	z-index: 1;
 	cursor: pointer;
-	color: #565656;
+	color: var(--color-text-secondary);
 }
 
 .icon-button svg {
@@ -159,8 +169,8 @@ header {
 }
 
 .icon-button:hover, .icon-button:focus {
-	background-color: #EC4646;
-	color: #FFF;
+	background-color: var(--color-icon-hover);
+	color: var(--color-light);
 }
 
 /* Footer */
