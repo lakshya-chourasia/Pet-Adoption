@@ -80,7 +80,8 @@ header {
 	padding: 1.25rem;
 	position: relative;
 	transition: .15s ease-in;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
 }
 
 .card:hover, .card:focus-within {
