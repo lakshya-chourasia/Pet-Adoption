@@ -116,7 +116,6 @@ header {
 	padding-right: 1rem;
 	text-decoration: none;
 	color: inherit;
-	will-change: transform;
 }
 
 .card-header a:after {
@@ -136,6 +135,7 @@ header {
 }
 
 .icon-button {
+	position: relative;
 	border: 0;
 	background-color: #fff;
 	border-radius: 50%;
