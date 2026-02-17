@@ -1,0 +1,3 @@
+## 2026-02-17 - Full-Card Link Overlay & Interactive Children
+**Learning:** `will-change: transform` on an anchor element creates a containing block for its absolute positioned descendants (like a full-card overlay pseudo-element), preventing the overlay from covering the intended ancestor container. Also, interactive children within such overlays (like favorite buttons) require explicit `position: relative` and `z-index` to remain clickable.
+**Action:** When implementing full-card links with nested buttons: 1) Verify overlay dimensions (it should cover the card), and 2) Ensure nested buttons have `position: relative` and higher `z-index` to sit above the overlay.
