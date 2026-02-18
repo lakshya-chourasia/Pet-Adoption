@@ -1,0 +1,3 @@
+## 2026-02-18 - Full Card Link Overlay and Containing Blocks
+**Learning:** `will-change: transform` creates a containing block for absolute positioned descendants. This can break "full card link" patterns where a pseudo-element (`::after`) is supposed to size relative to a parent container (like `.card`) but instead sizes relative to the element with `will-change`.
+**Action:** When using the full card link pattern (`position: relative` on card, `position: absolute` on link pseudo), ensure the link element itself does not have properties that create a new containing block (like `transform`, `will-change: transform`, `perspective`, etc.), or move the pseudo-element to a container that is safe.
