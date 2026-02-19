@@ -163,6 +163,10 @@ header {
 	color: #FFF;
 }
 
+.icon-button:active {
+	transform: scale(0.95);
+}
+
 /* Footer */
 footer {
     background-color: var(--color-dark);
