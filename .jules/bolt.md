@@ -1,0 +1,3 @@
+## 2024-05-24 - Optimize Font Critical Rendering Path
+**Learning:** Google Fonts were previously loaded via `@import` inside `css/style.css`. In this static architecture, this delays font discovery because the browser must download and parse the CSS before it can even initiate the font request, causing a sequential network waterfall. Moving to `<link>` tags with `preconnect` in the HTML `<head>` parallelizes the requests and speeds up First Contentful Paint (FCP).
+**Action:** Always combine Google Fonts into a single `<link>` tag and place them directly in the HTML `<head>`, preceded by `<link rel="preconnect">` tags for `fonts.googleapis.com` and `fonts.gstatic.com` to optimize the critical rendering path. Avoid using `@import` for fonts.
