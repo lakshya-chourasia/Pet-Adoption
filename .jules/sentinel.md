@@ -1,0 +1,4 @@
+## 2026-03-05 - Security Headers for Static Architecture
+**Vulnerability:** Missing Content-Security-Policy and Referrer-Policy headers in a pure static site architecture without a backend server to set HTTP response headers.
+**Learning:** In purely static architectures without configurable web servers, standard HTTP security headers cannot be set conventionally. However, the exact same protection can be applied using `<meta>` tags directly in the HTML `<head>`. This effectively secures the static site against XSS and data leakage by enforcing the same browser rules.
+**Prevention:** For any future static-only projects, automatically embed `<meta http-equiv="Content-Security-Policy">` and `<meta name="referrer">` tags during development to establish defense-in-depth early, avoiding reliance on non-existent backend configurations.
