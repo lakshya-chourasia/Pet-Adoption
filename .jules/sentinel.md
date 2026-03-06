@@ -1,0 +1,4 @@
+## 2026-03-06 - Strict CSP on Static UI Components
+**Vulnerability:** Lack of Content-Security-Policy (CSP) headers and unprotected third-party image elements (e.g. `placedog.net`) increased exposure to XSS, unauthorized style injections, and external credential/referrer leakage.
+**Learning:** For a purely static frontend lacking a backend server to generate HTTP headers, security policies must be embedded directly within the HTML `<head>` using `<meta http-equiv="...">` and `<meta name="...">` tags. In addition, third-party `<img>` elements must be individually hardened using `crossorigin="anonymous"` and `referrerpolicy="no-referrer"` to contain resource requests.
+**Prevention:** Implement strict CSP, `Referrer-Policy`, and element-level attribute protections globally across static resources, even on simple unauthenticated landing pages, using `<meta>` tags and enforcing external `img` attributes at the template level.
