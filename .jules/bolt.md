@@ -1,0 +1,3 @@
+## 2024-05-18 - Font Loading Optimization
+**Learning:** Using CSS `@import` for Google Fonts in style.css creates a critical request chain bottleneck that blocks parallel resource downloading. The browser must first download and parse the HTML, then the CSS, and only then start downloading the fonts.
+**Action:** Always use `<link rel="preconnect">` and combine font families into a single `<link rel="stylesheet">` tag directly in the HTML `<head>` instead to optimize the critical rendering path.
