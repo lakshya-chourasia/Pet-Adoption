@@ -1,0 +1,3 @@
+## 2024-05-24 - Icon Buttons Require ARIA Labels
+**Learning:** In a pure HTML static site without JS rendering or reusable components, icon-only buttons (like the favorite/heart buttons on pet cards) are inherently inaccessible to screen readers because they lack descriptive text. This applies broadly to this project’s component structure.
+**Action:** When adding or modifying interactive elements that rely solely on visual cues (like SVGs) in this repo, ensure `aria-label` and `title` attributes are manually injected for each instance, using the surrounding text context (e.g., the pet's name) to provide meaning.
