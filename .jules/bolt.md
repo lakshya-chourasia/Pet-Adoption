@@ -1,0 +1,3 @@
+## 2024-05-18 - CSS @import Request Chaining Bottleneck
+**Learning:** Using `@import` for external resources like Google Fonts in CSS files creates a critical request chain bottleneck that blocks parallel resource downloading and slows down the critical rendering path. The browser must download and parse the HTML, then download and parse the CSS, and only then start downloading the fonts.
+**Action:** Always load external fonts using a single combined `<link rel="stylesheet">` tag directly in the HTML `<head>`, preceded by `<link rel="preconnect">` tags for the font origins (e.g., `fonts.googleapis.com` and `fonts.gstatic.com` with `crossorigin`) to pre-warm the connections and parallelize downloads.
