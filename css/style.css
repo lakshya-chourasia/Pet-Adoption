@@ -136,6 +136,7 @@ header {
 }
 
 .icon-button {
+	position: relative;
 	border: 0;
 	background-color: #fff;
 	border-radius: 50%;
