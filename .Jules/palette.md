@@ -1,0 +1,3 @@
+## 2024-05-15 - Icon-only buttons and Full-card overlays
+**Learning:** Icon-only buttons using SVGs lack inherent context, leading to poor accessibility for screen readers. Furthermore, using a full-card link overlay (`position: absolute` on `::after`) makes interactive elements like icon buttons unclickable unless they have explicit relative positioning and a higher `z-index`.
+**Action:** Always add dynamic `aria-label` and `title` attributes to icon-only buttons. When using full-card link overlays, ensure nested interactive elements explicitly declare `position: relative; z-index: 2;` so they remain accessible and usable.

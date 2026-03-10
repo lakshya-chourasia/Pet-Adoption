@@ -84,7 +84,7 @@ header {
 }
 
 .card:hover, .card:focus-within {
-	box-shadow: 0 0 0 2px #f00000, 0 10px 60px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 0 0 2px var(--color-accent), 0 10px 60px 0 rgba(0, 0, 0, .1);
 	transform: translateY(-5px);
 }
 
@@ -148,7 +148,8 @@ header {
 	font-size: 1.25rem;
 	transition: .25s ease;
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 3px 8px 0 rgba(0, 0, 0, .15);
-	z-index: 1;
+	z-index: 2;
+	position: relative;
 	cursor: pointer;
 	color: #565656;
 }
@@ -158,8 +159,8 @@ header {
 	height: 1em;
 }
 
-.icon-button:hover, .icon-button:focus {
-	background-color: #EC4646;
+.icon-button:hover, .icon-button:focus-visible {
+	background-color: var(--color-accent);
 	color: #FFF;
 }
 
