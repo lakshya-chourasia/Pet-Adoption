@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessible Icon Buttons in Cards
+**Learning:** Icon-only buttons within card components frequently lack contextual text for screen readers. Additionally, standard `:focus` styles on these buttons can cause unnecessary visual noise for mouse users navigating the cards.
+**Action:** When implementing icon-only buttons (like favorite toggles) inside cards, always dynamically inject `aria-label` and `title` attributes based on the card's context (e.g., the pet's name). Furthermore, replace `:focus` with `:focus-visible` on these interactive elements to improve keyboard accessibility while preserving a cleaner UI for mouse interactions.
