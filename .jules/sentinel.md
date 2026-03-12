@@ -1,0 +1,4 @@
+## 2026-03-12 - Static Site Security Headers Implementation
+**Vulnerability:** The application was missing critical security headers like `Content-Security-Policy` and `Referrer-Policy`, which are essential to protect against XSS and control referrer information leakage.
+**Learning:** For pure static sites with no backend server (like simple HTML pages without Node.js, Django, etc.), traditional HTTP header injection via server configuration isn't always possible or easily maintained if hosting varies. Security headers must be implemented using `<meta http-equiv="...">` and `<meta name="...">` tags directly within the HTML `<head>`.
+**Prevention:** Include a foundational security header meta tag configuration (like CSP with restrictive `default-src 'self'`) in the boilerplate template for any static page development, ensuring required external resources (like fonts or specific CDNs) are explicitly allowed.
