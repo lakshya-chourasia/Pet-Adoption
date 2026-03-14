@@ -1,0 +1,3 @@
+## 2024-03-14 - Icon-only buttons accessibility and focus states
+**Learning:** Icon-only SVG buttons in this project's UI cards (e.g. `<button class="icon-button"> <svg>...`) lack context for screen readers and tooltips for visual users, making them inaccessible. Additionally, using `:focus` on these interactive elements creates visual noise for mouse users.
+**Action:** When working with icon-only buttons, programmatically inject dynamic `aria-label` and `title` attributes that provide clear, context-aware actions (like "Favorite [Item]"). Replace the CSS `:focus` pseudo-class with `:focus-visible` to maintain keyboard accessibility while improving the experience for pointer device users.
