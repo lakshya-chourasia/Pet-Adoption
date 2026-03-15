@@ -1,0 +1,3 @@
+## 2026-03-15 - Dynamic ARIA labels and Focus Visible for Icon Buttons
+**Learning:** Icon-only SVG buttons in lists or grids require dynamic `aria-label` and `title` attributes (e.g., "Favorite Monti" instead of just "Favorite") to provide necessary context for screen reader users and tooltips for sighted users. Additionally, using `:focus-visible` instead of `:focus` improves keyboard accessibility while eliminating visual noise for mouse users clicking these buttons.
+**Action:** Always inject contextual labels into repeated icon buttons and default to `:focus-visible` for their interactive states.
