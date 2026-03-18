@@ -1,0 +1,3 @@
+## 2024-03-18 - Context-Aware ARIA Labels in Repeating Card Layouts
+**Learning:** In repeating card layouts (like a grid of pet profiles), screen reader users encounter identical icon-only buttons (e.g., `<button class="icon-button"><svg>...</svg></button>`) without context. Simply adding a static `aria-label="Favorite"` is insufficient because the user won't know *which* item they are favoriting when tabbing through the interface quickly.
+**Action:** Always dynamically extract or associate the adjacent item's name (e.g., `aria-label="Favorite Monti"`) for icon-only actions within repeating patterns to ensure unique screen reader accessibility, and provide a corresponding `title` attribute for usable visual tooltips.
