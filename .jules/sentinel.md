@@ -1,0 +1,4 @@
+## 2024-05-18 - Adding Content Security Policy (CSP) and Referrer Policy via Meta Tags
+**Vulnerability:** Missing security headers (CSP and Referrer-Policy) leaving the static site vulnerable to XSS and information leakage via referrers.
+**Learning:** For pure static sites without a backend server, standard HTTP response headers can't be set directly. The established solution is to inject `<meta http-equiv="Content-Security-Policy">` and `<meta name="referrer">` directly into the HTML `<head>`. Also learned the baseline CSP for this specific app structure: `default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://placedog.net;`.
+**Prevention:** In static site architectures lacking server-side routing or custom response headers, always establish a baseline CSP using meta tags during initial project setup to restrict external asset loading to known sources.
