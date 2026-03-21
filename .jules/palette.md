@@ -1,0 +1,3 @@
+## 2026-03-21 - Context-Aware ARIA Labels for Repeating Icon Buttons
+**Learning:** Icon-only buttons (like "favorite" heart icons) within repeating card layouts (e.g., pet adoption cards) require dynamic, context-aware `aria-label` and `title` attributes (e.g., "Favorite Monti" instead of just "Favorite"). Without context, screen reader users hear the exact same label repeatedly and cannot determine which item the action applies to.
+**Action:** Always extract the adjacent item's name (e.g., from a neighboring `<h3>` or `.name` element) and inject it into the `aria-label` and `title` attributes of icon-only buttons within list or card components to ensure unique, identifiable accessibility.
