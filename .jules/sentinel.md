@@ -1,0 +1,5 @@
+## 2024-05-24 - Missing Security Headers
+
+**Vulnerability:** The application was missing critical security headers, specifically a Content-Security-Policy (CSP) and Referrer-Policy, making it more susceptible to Cross-Site Scripting (XSS) and data leakage via referrer headers.
+**Learning:** For pure static site architectures without a custom backend server, security headers must be implemented directly in the HTML `<head>` using `<meta http-equiv="...">` and `<meta name="...">` tags. The CSP must carefully whitelist external resources (like fonts.googleapis.com, fonts.gstatic.com, and placedog.net) to avoid breaking functionality.
+**Prevention:** Always include a baseline Content-Security-Policy (CSP) and restrictive Referrer-Policy via `<meta>` tags in the root `index.html` of static single-page applications during initial project setup to enforce defense-in-depth from the start.
