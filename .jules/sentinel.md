@@ -1,0 +1,4 @@
+## 2024-05-24 - CSP for purely static apps
+**Vulnerability:** Missing Content Security Policy (CSP) headers in a purely static website architecture without an application server or reverse proxy.
+**Learning:** Standard HTTP security headers like CSP and Referrer-Policy can still be effectively applied via `<meta http-equiv="...">` and `<meta name="...">` tags inside the `index.html` `<head>` when server-side configuration isn't available.
+**Prevention:** Include standard meta security tags directly in static HTML templates early in development to ensure basic baseline protections are present regardless of hosting environments.
