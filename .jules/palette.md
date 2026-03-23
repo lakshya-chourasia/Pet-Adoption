@@ -1,0 +1,3 @@
+## 2025-03-23 - Dynamic ARIA Labels for Icon Buttons in Card Layouts
+**Learning:** Icon-only buttons within repeating card layouts require dynamic, context-aware `aria-label` and `title` attributes (e.g., extracted from an adjacent item's name like "Favorite Monti") to ensure unique screen reader accessibility and usable tooltips, instead of generic text like "Favorite".
+**Action:** When working with repeating lists or cards containing icon-only interactive elements, programmatically inject context-specific names into `aria-label` and `title` attributes.
