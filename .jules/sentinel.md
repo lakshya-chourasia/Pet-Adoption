@@ -1,0 +1,4 @@
+## 2024-05-24 - CSP implementation on static architectures
+**Vulnerability:** Missing Content-Security-Policy and Referrer-Policy leaves pure static HTML/CSS sites susceptible to external injections and referrer data leaks.
+**Learning:** For static sites without a custom backend server to inject HTTP headers, security headers like CSP and Referrer-Policy must be manually implemented via `<meta>` tags directly in the HTML `<head>`. This approach successfully enforces the policies natively in the browser without backend architecture.
+**Prevention:** In static deployments, explicitly define CSP in the head via `<meta http-equiv="Content-Security-Policy">`, explicitly listing known external dependencies (e.g. `fonts.googleapis.com` for styles, `placedog.net` for images), instead of waiting for non-existent backend header configuration.
