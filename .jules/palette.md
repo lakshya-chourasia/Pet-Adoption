@@ -1,0 +1,3 @@
+## 2026-03-27 - Context-Aware ARIA Labels in Repeating Card Layouts
+**Learning:** When using icon-only buttons in repeating card layouts, generic `aria-label`s fail to provide unique context for screen readers. Using context-aware labels (e.g., extracted from adjacent item names) combined with explicit `:focus-visible` outlines ensures both screen reader and keyboard accessibility without adding visual noise for pointer users.
+**Action:** Always extract text from adjacent or parent elements to create unique, descriptive `aria-label` and `title` attributes for icon-only buttons in repeating structures, and pair them with high-contrast `:focus-visible` outlines.
