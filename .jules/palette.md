@@ -1,0 +1,3 @@
+## 2024-03-29 - Contextual aria-labels and :focus-visible for card buttons
+**Learning:** Icon-only buttons within repeating card layouts become inaccessible without context. Generic 'Like' or 'Favorite' labels create repetitive and confusing experiences for screen reader users. Additionally, pure `:focus` states can be visually noisy for mouse users while poor for keyboard users.
+**Action:** Always extract dynamic context (like adjacent item titles) for `aria-label` and `title` attributes on icon-only buttons in repeating layouts. Utilize `:focus-visible` with a high-contrast outline to improve keyboard navigation without compromising mouse interaction.
