@@ -1,0 +1,3 @@
+## 2026-03-30 - Dynamic ARIA Labels in Repeating Card Layouts
+**Learning:** The codebase uses icon-only SVG buttons (e.g., `<button class="icon-button"> <svg>...`) within repeating card layouts which require dynamic, context-aware `aria-label` and `title` attributes (e.g., extracted from the adjacent item's name) to ensure unique screen reader accessibility and usable tooltips.
+**Action:** When working with repeating items that use the same icon for an action, always ensure that screen readers and hover states can differentiate which specific item the action applies to by extracting surrounding context (like item names) to construct dynamic `aria-label` and `title` values.
