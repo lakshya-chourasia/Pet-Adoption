@@ -1,0 +1,3 @@
+## 2026-03-31 - Explicit Dimensions on External Images
+**Learning:** For external images sourced from `placedog.net` in this repository, their dimensions are specified directly within the URL path (e.g., width/height), which can be parsed to dynamically assign explicit dimension attributes preventing CLS (Cumulative Layout Shift) without needing external verification. Adding `loading="lazy"` on below-the-fold images further improves load time.
+**Action:** Always parse external image paths to apply exact `width` and `height` attributes where possible, explicitly checking the URL pattern. Only apply lazy loading to content strictly below the initial viewport to protect LCP.
