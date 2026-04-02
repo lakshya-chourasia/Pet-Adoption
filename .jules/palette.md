@@ -1,0 +1,3 @@
+## 2025-04-02 - Accessible Icon Buttons in Repeated Contexts
+**Learning:** For repeating components (like cards) with icon-only buttons, generic `aria-label`s fail screen reader users because the context is lost. Additionally, generic `:focus` styles on interactive elements often create unnecessary visual noise for mouse users, prompting developers to remove them and thus harm keyboard accessibility.
+**Action:** Always parse context dynamically (e.g., adjacent names) to build unique `aria-label` and `title` attributes (e.g., "Favorite Monti"). Furthermore, prefer using the `:focus-visible` pseudo-class coupled with an explicit high-contrast outline to satisfy both keyboard accessibility and clean mouse UX.
