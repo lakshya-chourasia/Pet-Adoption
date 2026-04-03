@@ -1,0 +1,3 @@
+## 2026-04-03 - Dynamic ARIA Labels in Repeating Card Layouts
+**Learning:** The codebase uses icon-only SVG buttons within repeating card layouts which require dynamic, context-aware `aria-label` and `title` attributes (e.g., extracted from the adjacent item's name) to ensure unique screen reader accessibility and usable tooltips.
+**Action:** When adding accessible labels to repeating elements, always ensure they are unique by incorporating context from the surrounding content (e.g., "Favorite Monti" instead of just "Favorite"). Also, prefer `:focus-visible` over `:focus` for interactive elements to improve keyboard accessibility while reducing visual noise for mouse users.

@@ -158,9 +158,11 @@ header {
 	height: 1em;
 }
 
-.icon-button:hover, .icon-button:focus {
+.icon-button:hover, .icon-button:focus-visible {
 	background-color: #EC4646;
 	color: #FFF;
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* Footer */
