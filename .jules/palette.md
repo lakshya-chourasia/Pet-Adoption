@@ -1,0 +1,3 @@
+## 2024-05-24 - Context-Aware ARIA Labels in Repeating Card Layouts
+**Learning:** When using icon-only buttons (like "Like" or "Favorite") in a repeating card layout, generic aria-labels like `aria-label="Like"` create significant accessibility issues. Screen reader users navigating by interactive elements will hear "Like, button", "Like, button" repeatedly, without context of *what* they are liking.
+**Action:** Always extract the adjacent context (e.g., the item's name like "Like Monti") to dynamically generate unique, descriptive `aria-label` and `title` attributes for each repeating button instance.
