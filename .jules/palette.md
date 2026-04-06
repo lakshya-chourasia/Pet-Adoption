@@ -1,0 +1,3 @@
+## 2026-04-06 - Context-Aware ARIA Labels for Repeating Icon Buttons
+**Learning:** Icon-only SVG buttons in repeating card layouts require dynamic, context-aware `aria-label` and `title` attributes (extracted from adjacent elements like the item name) to ensure unique screen reader accessibility, and switching from `:focus` to `:focus-visible` reduces visual noise for mouse users while keeping keyboard accessibility with high-contrast outlines.
+**Action:** Always extract adjacent identifying context when applying ARIA labels to repeating icon-only buttons, and prefer `:focus-visible` with `outline` over `:focus` for interactive elements to balance mouse and keyboard UX.
