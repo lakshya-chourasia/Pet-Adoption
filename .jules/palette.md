@@ -1,0 +1,3 @@
+## 2026-04-07 - Accessible dynamic favorite buttons
+**Learning:** Icon-only SVG buttons in repeating card layouts require dynamic, context-aware `aria-label` and `title` attributes (extracted from adjacent elements like names) to ensure unique accessibility. Additionally, relying solely on `:focus` creates visual noise for mouse users; replacing it with `:focus-visible` ensures clear keyboard navigation cues with an explicit outline without compromising the mouse experience.
+**Action:** When auditing repeating UI elements, always dynamically inject contextual `aria-label` and `title` attributes for icon-only buttons, and prefer `:focus-visible` over `:focus` for interactive elements to balance keyboard accessibility with mouse UX.
