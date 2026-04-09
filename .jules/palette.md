@@ -1,0 +1,3 @@
+## 2026-04-09 - Accessible Icon Buttons in Repeating Cards
+**Learning:** Using generic icon-only buttons (like a heart icon) in repeating card layouts creates accessibility issues because screen readers cannot distinguish which item the button applies to without contextual `aria-label` attributes (e.g., "Favorite Monti" vs just "Favorite"). Additionally, `title` attributes act as helpful tooltips for visual users.
+**Action:** Always extract the context (e.g., the adjacent item's name) to generate unique, descriptive `aria-label` and `title` attributes for icon-only buttons in lists or cards. Furthermore, prefer `:focus-visible` over `:focus` with a high-contrast outline to improve keyboard accessibility without adding visual noise for mouse users.
