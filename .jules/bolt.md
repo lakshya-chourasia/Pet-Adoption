@@ -1,0 +1,3 @@
+## 2026-04-09 - Placeholder Dimensions from URLs
+**Learning:** For external placeholder images sourced from `placedog.net`, their actual dimensions are statically declared directly within their URL paths (e.g., `/300/225`), meaning explicit `width` and `height` attributes can be parsed and strictly applied to prevent CLS without needing to fetch or evaluate the images programmatically.
+**Action:** When working with placeholder services, inspect the URL structure first before writing complex verification scripts; dimension data can often be extracted cleanly using regex directly from the `src` attribute.
