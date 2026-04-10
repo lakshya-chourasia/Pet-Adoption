@@ -1,0 +1,3 @@
+## 2024-06-25 - Context-Aware ARIA Labels for Icon Buttons in Repeating Layouts
+**Learning:** When using icon-only buttons (like a favorite/heart button) within repeating components (like pet cards), a static generic `aria-label` (e.g., "Favorite") is insufficient for screen readers because it provides no context about *which* item is being favorited. Additionally, a generic or absent `title` attribute fails to provide helpful tooltip context for sighted mouse users.
+**Action:** Always dynamically extract adjacent contextual text (e.g., the pet's name) to create unique, descriptive `aria-label` and `title` attributes (e.g., "Favorite Monti") for icon-only buttons in repeating layouts.
