@@ -1,0 +1,3 @@
+## 2024-04-11 - Context-Aware ARIA Labels for Icon Buttons in Repeating Layouts
+**Learning:** When using icon-only buttons (like favorite or delete actions) within repeating card layouts, generic `aria-label` values (like "Favorite") cause accessibility issues for screen reader users, as all buttons on the page sound identical and lack context about which item they affect.
+**Action:** Always extract the adjacent item's name or context (e.g., the pet's name) to generate dynamic, unique, and context-aware `aria-label` and `title` attributes (e.g., `aria-label="Favorite Monti"`) to ensure the action is clear and distinct.
