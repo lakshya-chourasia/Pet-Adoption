@@ -1,0 +1,3 @@
+## 2026-04-13 - Context-Aware ARIA Labels for Icon Buttons
+**Learning:** Icon-only buttons in repeating card layouts must have unique, context-aware `aria-label` and `title` attributes (e.g., extracted from the adjacent item's name) to ensure unique screen reader accessibility and usable tooltips, rather than generic 'Favorite' labels which are indistinguishable.
+**Action:** When adding accessibility to repeating lists or grids, dynamically generate labels using adjacent text content (like pet names) to provide proper context. Additionally, replace standard `:focus` with `:focus-visible` coupled with a high-contrast outline for better keyboard accessibility without compromising mouse user aesthetics.
