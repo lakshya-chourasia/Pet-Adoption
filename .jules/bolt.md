@@ -1,0 +1,3 @@
+## 2024-05-13 - Preventing Layout Shifts and Saving Bandwidth with Image Attributes
+**Learning:** In static sites with many images, failing to specify explicit `width` and `height` attributes causes significant Cumulative Layout Shifts (CLS) as the browser cannot reserve space before the images load. Furthermore, eagerly loading all images offscreen consumes unnecessary initial bandwidth.
+**Action:** Always parse image dimensions (via `file` for local assets or URL parsing for external assets like `placedog.net`) to inject explicit `width` and `height` attributes, and apply `loading="lazy"` only to offscreen images, leaving above-the-fold images to load eagerly for optimal Largest Contentful Paint (LCP).
