@@ -1,0 +1,3 @@
+## 2026-04-14 - Context-Aware ARIA Labels for Icon-Only Buttons
+**Learning:** In repeating card layouts with identical icon-only buttons (like favorite hearts), generic `aria-label="Favorite"` fails screen reader users who can't determine *which* item is being favorited. Similarly, tooltips (`title`) become ambiguous.
+**Action:** Extract the adjacent item's name dynamically from the DOM to inject context-aware attributes (e.g., `aria-label="Favorite Monti"`, `title="Favorite Monti"`), ensuring each button is uniquely identifiable and accessible. Use `:focus-visible` over `:focus` with explicit high-contrast outlines for interactive elements to improve keyboard accessibility while reducing visual noise for mouse users.
