@@ -1,0 +1,3 @@
+## 2026-04-18 - Context-Aware ARIA Labels for Icon Buttons
+**Learning:** Icon-only buttons in repeating card layouts (like a grid of pets) lack sufficient context for screen readers when they use generic ARIA labels (e.g., just "Favorite"). Users rely on the adjacent item's name for context.
+**Action:** Always inject dynamic, context-aware `aria-label` and `title` attributes (e.g., "Favorite Monti") into icon-only buttons extracted from adjacent identifiers to ensure unique screen reader accessibility and usable tooltips.
