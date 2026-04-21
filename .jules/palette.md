@@ -1,0 +1,3 @@
+## 2026-04-21 - Dynamic ARIA Labels in Repeating Components
+**Learning:** Icon-only SVG buttons within repeating layout structures (like card grids) require dynamic, context-aware `aria-label` and `title` attributes extracted from adjacent items to ensure screen readers receive unique, identifying context. Static labels like "Favorite" are insufficient when multiple identical buttons exist on a page.
+**Action:** When auditing repeating layouts or grids, ensure any icon-only actions (like "Delete", "Edit", or "Favorite") dynamically append the target item's name to their `aria-label` and `title` attributes for full accessibility compliance.
