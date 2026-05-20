@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://placedog.net; font-src 'self' https://fonts.gstatic.com; connect-src 'self'">
+    <!-- 🛡️ Added Content-Security-Policy to restrict resource loading and mitigate XSS risks -->
     <title>Adopt Time</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
