@@ -1,0 +1,3 @@
+## 2024-03-24 - Image Optimization Strategy
+**Learning:** Static HTML sites with native images (`<img>`) still require deliberate dimension and loading strategies. While CSS constraints (`max-width: 100%`) maintain layout, adding explicit `width` and `height` attributes matching the source dimensions prevents Cumulative Layout Shift (CLS) by allowing the browser to reserve space before image load. Furthermore, lazy loading (`loading="lazy"`) should be applied strictly to below-the-fold images to avoid delaying initial rendering.
+**Action:** Always add explicit `width` and `height` to all images to reserve layout space, and selectively apply `loading="lazy"` only to images outside the initial viewport to optimize both perceived performance and CLS.
