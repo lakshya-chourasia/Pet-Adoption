@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <!-- Security Enhancement: Added Content-Security-Policy to restrict resource loading -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' https://placedog.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopt Time</title>
