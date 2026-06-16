@@ -1,0 +1,4 @@
+## 2026-06-16 - Add Content Security Policy
+**Vulnerability:** The application lacked a Content Security Policy (CSP), leaving it potentially vulnerable to Cross-Site Scripting (XSS) and unwanted resource loading if an attacker found an injection vector.
+**Learning:** When implementing CSP for sites using Google Fonts, implicitly loaded domains like `https://fonts.gstatic.com` must be discovered and allowed via the `font-src` directive, otherwise the fonts will fail to load even if `https://fonts.googleapis.com` is allowed in `style-src`. Playwright's console error capture is essential for discovering these implicit dependencies during verification.
+**Prevention:** Always verify external resource loading in development using browser console logs or automated Playwright testing to ensure all necessary implicit domains are included in the CSP before deploying to production.
