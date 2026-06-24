@@ -1,0 +1,4 @@
+## 2026-06-24 - Content Security Policy for Static Assets
+**Vulnerability:** The application was missing a Content Security Policy (CSP), leaving it susceptible to basic XSS attacks or unauthorized external resource loading if other vulnerabilities were later introduced.
+**Learning:** When implementing CSP for static sites using Google Fonts, both `style-src` (for `https://fonts.googleapis.com`) and `font-src` (for `https://fonts.gstatic.com` and `data:`) must be explicitly allowed to prevent font rendering breakage, as Google's CSS loads font files from a different subdomain.
+**Prevention:** Always include a restrictive CSP in the `<head>` of HTML documents early in development, using `default-src 'self'` and incrementally adding required external domains (like image providers or font CDNs) as needed.
