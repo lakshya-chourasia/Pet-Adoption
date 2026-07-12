@@ -1,0 +1,4 @@
+## 2026-07-12 - Content Security Policy Configuration
+**Vulnerability:** Missing Content Security Policy (CSP) headers in the static HTML structure, leaving the site vulnerable to potential data injection or XSS if dynamic content is ever added.
+**Learning:** When implementing CSP for static sites using external assets like Google Fonts, explicitly allowing `https://fonts.gstatic.com` and `data:` in the `font-src` directive is critical because Google's CSS files pull font files from that domain and occasionally use data URIs for small assets. Allowing only `https://fonts.googleapis.com` in `style-src` is insufficient.
+**Prevention:** Always verify the full network dependency tree of external assets (including those loaded implicitly by third-party CSS) and test locally with console monitoring before enforcing a strict CSP.
