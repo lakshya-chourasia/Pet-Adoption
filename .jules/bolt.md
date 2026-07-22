@@ -1,0 +1,4 @@
+## 2024-11-20 - Adding lazy loading to images
+
+**Learning:** I added native lazy loading (`loading="lazy"`) to all offscreen images in a static HTML project. The automated code reviewer pointed out a useful nuance: applying lazy loading to the very first image in a list *can* slightly delay Largest Contentful Paint (LCP) if that image appears "above the fold" immediately on load. In this case, since there's a large hero section above the list, it's likely fine, but it's an important distinction for critical rendering path optimization.
+**Action:** When adding lazy loading to long lists of images in the future, carefully consider the page layout. If the first image or two are guaranteed to be in the initial viewport (above the fold), they should retain eager loading (`loading="eager"` or omitting the attribute entirely) to prioritize LCP, while only off-screen images receive `loading="lazy"`.
